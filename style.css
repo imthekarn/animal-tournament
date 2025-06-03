@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f0f8ff;
+}
+
+#tournament {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.animal {
+  width: 200px;
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.animal:hover {
+  transform: scale(1.05);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.vs {
+  font-size: 24px;
+  margin: 0 20px;
+}
+body {
+  background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
