@@ -1,3 +1,4 @@
+const clickSound = new Audio("https://www.myinstants.com/media/sounds/pop-cat-original-meme.mp3");
 const animals = [
   { name: "Cat", img: "https://media.tenor.com/RHL93QuyhVsAAAAM/%E0%B8%AD%E0%B8%B4%E0%B9%82%E0%B8%A1%E0%B8%88%E0%B8%B4%E0%B9%84%E0%B8%AD%E0%B9%82%E0%B8%9F%E0%B8%99.gif" },
   { name: "Dog", img: "https://media3.giphy.com/media/Z5xk7fGO5FjjTElnpT/200w.gif?cid=6c09b952m78b7c6msygb5ciuzbqxb7dk23fi6t87nfljfhcl&ep=v1_gifs_search&rid=200w.gif&ct=g" },
@@ -24,7 +25,6 @@ const animals = [
   { name: "Puppy", img: "https://sdmntpreastus.oaiusercontent.com/files/00000000-4c18-61f9-a9ea-21fdabd1c10e/raw?se=2025-06-06T06%3A58%3A34Z&sp=r&sv=2024-08-04&sr=b&scid=d463f2e8-6932-5eb2-b67d-ded6a3a278ef&skoid=5cab1ff4-c20d-41dc-babb-df0c2cc21dd4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-06T02%3A13%3A35Z&ske=2025-06-07T02%3A13%3A35Z&sks=b&skv=2024-08-04&sig=nBNPCdwXBAFka0G00boomk8GILap5j6bdgxF1%2BybyZM%3D" },
   { name: "Kitten", img: "https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.15752-9/455329845_364329530072457_2795455768518642782_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=yV8db6NeJs4Q7kNvwH3dZMg&_nc_oc=Adno9XphtNNpWZRVE-jw_wm371OqLlAY8sOcmONFDMyuU-x5wrPzvobHw0K4T8ZruO0IA2XcGttS3smIM64XRwJP&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&oh=03_Q7cD2gH5wtNsnYYKuWAgLyQURb7xKuNPLnHjHj-PmQUbTzwmZA&oe=6869DAB4" },
 ];
-const clickSound = new Audio("https://www.myinstants.com/media/sounds/pop-cat-original-meme.mp3"); // หรือเปลี่ยนลิงก์เสียงอื่นได้
 
 let queue = shuffle([...animals]);
 let nextRound = [];
@@ -39,18 +39,9 @@ let round = 1;
 function showPair() {
   if (currentIndex >= queue.length) {
     if (queue.length === 1) {
-  document.getElementById('tournament').innerHTML = `
-    <h2 class="winner">🏆 Winner: ${queue[0].name} 🏆</h2>
-    <img src="${queue[0].img}" style="width:300px;">
-  `;
-  return;
-}if (queue.length === 1) {
-  document.getElementById('tournament').innerHTML = `
-    <h2 class="winner">🏆 Winner: ${queue[0].name} 🏆</h2>
-    <img src="${queue[0].img}" style="width:300px;">
-  `;
-  return;
-}
+      document.getElementById('tournament').innerHTML = `<h2>🏆 Winner: ${queue[0].name} 🏆</h2><img src="${queue[0].img}" style="width:300px;">`;
+      return;
+    }
     queue = [...nextRound];
     nextRound = [];
     currentIndex = 0;
@@ -68,12 +59,7 @@ function showPair() {
 }
 
 function choose(winner) {
-  clickSound.play(); // ✅ เล่นเสียง
-  const chosen = winner === "left" ? queue[currentIndex] : queue[currentIndex + 1];
-  nextRound.push(chosen);
-  currentIndex += 2;
-  showPair();
-}
+  clickSound.play();
   const chosen = winner === "left" ? queue[currentIndex] : queue[currentIndex + 1];
   nextRound.push(chosen);
   currentIndex += 2;

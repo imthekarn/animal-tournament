@@ -60,6 +60,8 @@ img {
     max-width: 100%;
   }
 }
+
+/* 🎉 Winner Animation */
 .winner {
   animation: pulse 1.2s ease-in-out infinite;
   color: gold;
