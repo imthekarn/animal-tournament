@@ -39,9 +39,18 @@ let round = 1;
 function showPair() {
   if (currentIndex >= queue.length) {
     if (queue.length === 1) {
-      document.getElementById('tournament').innerHTML = `<h2>🏆 Winner: ${queue[0].name} 🏆</h2><img src="${queue[0].img}" style="width:300px;">`;
-      return;
-    }
+  document.getElementById('tournament').innerHTML = `
+    <h2 class="winner">🏆 Winner: ${queue[0].name} 🏆</h2>
+    <img src="${queue[0].img}" style="width:300px;">
+  `;
+  return;
+}if (queue.length === 1) {
+  document.getElementById('tournament').innerHTML = `
+    <h2 class="winner">🏆 Winner: ${queue[0].name} 🏆</h2>
+    <img src="${queue[0].img}" style="width:300px;">
+  `;
+  return;
+}
     queue = [...nextRound];
     nextRound = [];
     currentIndex = 0;
