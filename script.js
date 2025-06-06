@@ -24,6 +24,7 @@ const animals = [
   { name: "Puppy", img: "https://sdmntpreastus.oaiusercontent.com/files/00000000-4c18-61f9-a9ea-21fdabd1c10e/raw?se=2025-06-06T06%3A58%3A34Z&sp=r&sv=2024-08-04&sr=b&scid=d463f2e8-6932-5eb2-b67d-ded6a3a278ef&skoid=5cab1ff4-c20d-41dc-babb-df0c2cc21dd4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-06-06T02%3A13%3A35Z&ske=2025-06-07T02%3A13%3A35Z&sks=b&skv=2024-08-04&sig=nBNPCdwXBAFka0G00boomk8GILap5j6bdgxF1%2BybyZM%3D" },
   { name: "Kitten", img: "https://scontent.fbkk8-2.fna.fbcdn.net/v/t1.15752-9/455329845_364329530072457_2795455768518642782_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=yV8db6NeJs4Q7kNvwH3dZMg&_nc_oc=Adno9XphtNNpWZRVE-jw_wm371OqLlAY8sOcmONFDMyuU-x5wrPzvobHw0K4T8ZruO0IA2XcGttS3smIM64XRwJP&_nc_zt=23&_nc_ht=scontent.fbkk8-2.fna&oh=03_Q7cD2gH5wtNsnYYKuWAgLyQURb7xKuNPLnHjHj-PmQUbTzwmZA&oe=6869DAB4" },
 ];
+const clickSound = new Audio("https://www.myinstants.com/media/sounds/pop-cat-original-meme.mp3"); // หรือเปลี่ยนลิงก์เสียงอื่นได้
 
 let queue = shuffle([...animals]);
 let nextRound = [];
