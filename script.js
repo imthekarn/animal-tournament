@@ -59,6 +59,12 @@ function showPair() {
 }
 
 function choose(winner) {
+  clickSound.play(); // ✅ เล่นเสียง
+  const chosen = winner === "left" ? queue[currentIndex] : queue[currentIndex + 1];
+  nextRound.push(chosen);
+  currentIndex += 2;
+  showPair();
+}
   const chosen = winner === "left" ? queue[currentIndex] : queue[currentIndex + 1];
   nextRound.push(chosen);
   currentIndex += 2;
