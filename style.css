@@ -22,7 +22,8 @@ body {
 }
 
 .animal {
-  width: 200px;
+  width: 100%;
+  max-width: 300px; /* จำกัดขนาดสูงสุดบนจอใหญ่ */
   margin: 20px;
   cursor: pointer;
   transition: transform 0.2s;
@@ -118,5 +119,20 @@ img {
 
   .animal {
     width: 90%; /* ทำให้ภาพใหญ่เต็มหน้าจอมือถือ */
+  }
+}
+@media (max-width: 768px) {
+  #tournament {
+    flex-direction: column;
+    margin: 10px;
+  }
+
+  .vs {
+    margin: 10px 0;
+  }
+
+  .animal {
+    width: 90%;        /* ให้กินพื้นที่จอเกือบเต็ม */
+    max-width: 100%;   /* บนจอเล็กก็ไม่มีการจำกัด */
   }
 }
