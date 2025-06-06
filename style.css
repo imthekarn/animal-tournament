@@ -13,6 +13,7 @@ body {
   padding: 0;
 }
 
+
 #tournament {
   display: flex;
   justify-content: center;
@@ -59,20 +60,6 @@ img {
   .animal {
     width: 90%; /* ทำให้ภาพใหญ่เต็มหน้าจอมือถือ */
   }
-}
-body {
-  text-align: center;
-  font-family: sans-serif;
-  background-color: #f0f8ff;
-  background-image: url('https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-  margin: 0;
-  padding: 0;
 }
 
 #tournament {
